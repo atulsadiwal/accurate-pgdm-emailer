@@ -1,222 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+        <title>Emailer Design with Animations</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
-    <title>Emailer Design with Animations</title>
-</head>
+    <body class="bg-gradient-to-b from-gray-100 via-gray-200 to-gray-300 flex justify-center">
+        <div id="container" class="max-w-4xl w-full text-white rounded-lg overflow-hidden shadow-2xl relative">
+            <!-- Decorative Background Shapes -->
+            <div class="absolute -top-16 -left-16 bg-blue-400 rounded-full h-64 w-64 opacity-30 animate-pulse"></div>
+            <!-- <div class="absolute -bottom-16 -right-16 bg-yellow-300 rounded-full h-64 w-64 opacity-30"></div> -->
 
-<body class="bg-gradient-to-b from-gray-100 via-gray-200 to-gray-300 flex justify-center">
-    <div id="container" class="max-w-4xl w-full text-white rounded-lg overflow-hidden shadow-2xl relative">
-        <!-- Decorative Background Shapes -->
-        <div class="absolute -top-16 -left-16 bg-blue-400 rounded-full h-64 w-64 opacity-30 animate-pulse"></div>
-        <!-- <div class="absolute -bottom-16 -right-16 bg-yellow-300 rounded-full h-64 w-64 opacity-30"></div> -->
+            <!-- Header Image -->
+            <div class="text-center p-4 bg-white">
+                <img id="logo" src="images/logo-new.jpg" alt="Accurate Logo" class="mx-auto" />
+            </div>
 
-        <!-- Header Image -->
-        <div class="text-center p-4 bg-white">
-            <img id="logo" src="images/logo-new.jpg" alt="Accurate Logo" class="mx-auto" />
-        </div>
+            <!-- Section 1: Intro Text -->
+            <div id="intro" class="p-8 text-center relative">
+                <div class="absolute inset-x-0 -top-4 h-12 bg-blue-400 opacity-10 transform -skew-y-3"></div>
+                <h2 class="text-4xl font-extrabold text-gray-800">Transform Your Career with Accurate PGDM</h2>
+                <p class="text-gray-600 mt-6 leading-relaxed">
+                    Are you ready to elevate your career to new heights? Join Accurate Institute’s AICTE-approved PGDM program, designed to equip you with cutting-edge skills and global perspectives.
+                </p>
+            </div>
 
-        <!-- Section 1: Intro Text -->
-        <div id="intro" class="p-8 text-center relative">
-            <div class="absolute inset-x-0 -top-4 h-12 bg-blue-400 opacity-10 transform -skew-y-3"></div>
-            <h2 class="text-4xl font-extrabold text-gray-800">Transform Your Career with Accurate PGDM</h2>
-            <p class="text-gray-600 mt-6 leading-relaxed">
-                Are you ready to elevate your career to new heights? Join Accurate Institute’s AICTE-approved PGDM program, designed to equip you with cutting-edge skills and global perspectives.
-            </p>
-        </div>
+            <!-- Banner Section -->
+            <div id="banner" class="bg-gray-800 relative mb-16">
+                <img src="images/emailer-banner.webp" alt="Student Image" class="w-full h-auto" />
+                <!-- <div class="absolute inset-0 bg-gradient-to-r from-gray-800 via-transparent to-gray-800 opacity-70"></div> -->
 
-        <!-- Banner Section -->
-        <div id="banner" class="bg-gray-800 relative mb-16">
-            <img src="images/emailer-banner.webp" alt="Student Image" class="w-full h-auto">
-            <!-- <div class="absolute inset-0 bg-gradient-to-r from-gray-800 via-transparent to-gray-800 opacity-70"></div> -->
+                <!-- Highlight Banner -->
+                <div
+                    class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-gradient-to-r from-yellow-400 via-orange-300 to-yellow-400 py-6 rounded-tr-full shadow-lg w-full max-md:w-full max-md:rounded-none flex justify-between items-center"
+                >
+                    <div class="absolute -top-8 left-8 w-32 h-32 bg-yellow-300 rounded-full blur-xl opacity-30"></div>
+                    <div class="absolute -bottom-8 right-8 w-32 h-32 bg-orange-400 rounded-full blur-xl opacity-30"></div>
 
-            <!-- Highlight Banner -->
-            <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-gradient-to-r from-yellow-400 via-orange-300 to-yellow-400 py-6 rounded-tr-full shadow-lg w-full max-md:w-full max-md:rounded-none flex justify-between items-center">
-                <div class="absolute -top-8 left-8 w-32 h-32 bg-yellow-300 rounded-full blur-xl opacity-30"></div>
-                <div class="absolute -bottom-8 right-8 w-32 h-32 bg-orange-400 rounded-full blur-xl opacity-30"></div>
-                
-                <!-- Highlight Content -->
-                <div class="grid grid-cols-2 max-md:grid-cols-1 gap-6 w-9/12 text-center z-10">
-                    <div class="highlight-item flex items-center justify-center gap-3">
-                        <i class="fas fa-chart-line text-3xl text-gray-800"></i>
-                        <h3 class="text-lg font-semibold text-gray-900 max-sm:text-base">100% Placements Track Record</h3>
+                    <!-- Highlight Content -->
+                    <div class="grid grid-cols-2 max-md:grid-cols-1 gap-6 w-9/12 text-center z-10">
+                        <div class="highlight-item flex items-center justify-center gap-3">
+                            <i class="fas fa-chart-line text-3xl text-gray-800"></i>
+                            <h3 class="text-lg font-semibold text-gray-900 max-sm:text-base">100% Placements Track Record</h3>
+                        </div>
+                        <div class="highlight-item flex items-center justify-center gap-3">
+                            <i class="fas fa-briefcase text-3xl text-gray-800"></i>
+                            <h3 class="text-lg font-semibold text-gray-900 max-sm:text-base">Career-Driven Approach</h3>
+                        </div>
+                        <div class="highlight-item flex items-center justify-center gap-3">
+                            <i class="fas fa-tasks text-3xl text-gray-800"></i>
+                            <h3 class="text-lg font-semibold text-gray-900 max-sm:text-base">Live Projects & Internships</h3>
+                        </div>
+                        <div class="highlight-item flex items-center justify-center gap-3">
+                            <i class="fas fa-certificate text-3xl text-gray-800"></i>
+                            <h3 class="text-lg font-semibold text-gray-900 max-sm:text-base">Industry Certifications</h3>
+                        </div>
                     </div>
-                    <div class="highlight-item flex items-center justify-center gap-3">
-                        <i class="fas fa-briefcase text-3xl text-gray-800"></i>
-                        <h3 class="text-lg font-semibold text-gray-900 max-sm:text-base">Career-Driven Approach</h3>
-                    </div>
-                    <div class="highlight-item flex items-center justify-center gap-3">
-                        <i class="fas fa-tasks text-3xl text-gray-800"></i>
-                        <h3 class="text-lg font-semibold text-gray-900 max-sm:text-base">Live Projects & Internships</h3>
-                    </div>
-                    <div class="highlight-item flex items-center justify-center gap-3">
-                        <i class="fas fa-certificate text-3xl text-gray-800"></i>
-                        <h3 class="text-lg font-semibold text-gray-900 max-sm:text-base">Industry Certifications</h3>
+
+                    <!-- CTA Button -->
+                    <div class="cta w-3/12 max-sm:w-full z-10 text-center">
+                        <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-full text-sm font-medium shadow-lg hover:bg-blue-700 transition transform hover:scale-105">
+                            Apply Now
+                        </a>
                     </div>
                 </div>
-        
-                <!-- CTA Button -->
-                <div class="cta w-3/12 max-sm:w-full z-10 text-center">
-                    <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-full text-sm font-medium shadow-lg hover:bg-blue-700 transition transform hover:scale-105">
-                        Apply Now
+            </div>
+
+            <section class="bg-cover bg-center bg-no-repeat bg-blue-800/70 bg-blend-multiply max-sm:h-fit" style="background-image: url('/images/accurate-banner.webp');">
+                <div class="max-w-[1400px] max-2xl:max-w-6xl max-xl:px-10 mx-auto py-10 w-full max-md:py-6 max-sm:py-4 max-sm:px-5">
+                    <h3 class="text-4xl pl-8 text-white font-FONT2 mb-4 max-lg:text-4xl max-md:text-3xl max-sm:text-2xl max-md:mb-2.5 max-sm:mb-1.5">
+                        Why Accurate?
+                    </h3>
+
+                    <ul class="text-base text-white max-w-2xl mb-5 font-novaReg pl-6 space-y-3 max-md:mb-3 max-sm:text-sm max-sm:mb-2 max-xl:max-w-lg">
+                        <li>🎓 Proven track record of transforming students into industry leaders</li>
+                        <li>🏢 Modern campus with advanced learning facilities</li>
+                        <li>🚍 Hostel & transport facilities for a seamless student experience</li>
+                    </ul>
+
+                    <a href="https://www.accurate.in/" class="pl-6">
+                        <button
+                            class="py-3 px-10 max-sm:py-2 max-sm:px-5 mt-3 text-[15px] rounded-xl font-novaBold uppercase bg-blue-500 hover:text-blue-600 text-white w-max hover:border hover:border-blue-300 hover:bg-transparent hover:border-b-4 hover:transform transition duration-200 ease-linear scale-y-105 hover:text-white tracking-widest max-md:mt-2.5 max-sm:text-sm max-sm:mt-1.5"
+                        >
+                            READ MORE
+                        </button>
                     </a>
                 </div>
-            </div>
-        </div>
+            </section>
 
-        <!-- Section 2: Key Highlights -->
-        <div id="highlights" class="relative bg-gray-100 py-12 overflow-hidden">
-            <div class="relative p-8 grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-800 z-10">
-                <div class="highlight-item flex items-start space-x-4">
-                    <span class="text-3xl text-red-500"><i class="fas fa-bullseye"></i></span>
-                    <div>
-                        <h3 class="font-bold text-lg">100% Placement Success</h3>
-                        <p class="font-semibold text-gray-900">Gain access to top recruiters and secure your dream job.</p>
+            <!-- Section 2: Key Highlights -->
+            <div id="highlights" class="relative bg-gray-100 py-12 overflow-hidden space-y-4">
+                <div class="relative px-8 pb-14 grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-800 z-10">
+                    <div class="highlight-item flex items-start space-x-4">
+                        <span class="text-3xl text-red-500"><i class="fas fa-bullseye"></i></span>
+                        <div>
+                            <h3 class="font-bold text-lg">100% Placement Success</h3>
+                            <p>Gain access to top recruiters and secure your dream job.</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item flex items-start space-x-4">
+                        <span class="text-3xl text-blue-500"><i class="fas fa-globe"></i></span>
+                        <div>
+                            <h3 class="font-bold text-lg">International Study Tour</h3>
+                            <p>Broaden your horizons with global exposure.</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item flex items-start space-x-4">
+                        <span class="text-3xl text-gray-500"><i class="fas fa-book"></i></span>
+                        <div>
+                            <h3 class="font-bold text-lg">Industry-Aligned Curriculum</h3>
+                            <p class="">Learn what the industry demands with real-world training.</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item flex items-start space-x-4">
+                        <span class="text-3xl text-black"><i class="fas fa-graduation-cap"></i></span>
+                        <div>
+                            <h3 class="font-bold text-lg">Scholarships up to ₹1 Lakh</h3>
+                            <p>Supporting you in achieving your goals.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="highlight-item flex items-start space-x-4">
-                    <span class="text-3xl text-blue-500"><i class="fas fa-globe"></i></span>
-                    <div>
-                        <h3 class="font-bold text-lg">International Study Tour</h3>
-                        <p class="font-semibold text-gray-900">Broaden your horizons with global exposure.</p>
-                    </div>
-                </div>
-                <div class="highlight-item flex items-start space-x-4">
-                    <span class="text-3xl text-gray-500"><i class="fas fa-book"></i></span>
-                    <div>
-                        <h3 class="font-bold text-lg">Industry-Aligned Curriculum</h3>
-                        <p class="font-semibold text-gray-900">Learn what the industry demands with real-world training.</p>
-                    </div>
-                </div>
-                <div class="highlight-item flex items-start space-x-4">
-                    <span class="text-3xl text-black"><i class="fas fa-graduation-cap"></i></span>
-                    <div>
-                        <h3 class="font-bold text-lg">Scholarships up to ₹1 Lakh</h3>
-                        <p class="font-semibold text-gray-900">Supporting you in achieving your goals.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Curved Line Decoration -->
-    <div class="absolute right-0 left-0 bottom-[-10px] w-full z-0">
-        <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="url(#gradient)" fill-opacity="1" d="M0,256L80,224C160,192,320,128,480,128C640,128,800,192,960,224C1120,256,1280,256,1360,256L1440,256L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
-            <defs>
-                <linearGradient id="gradient" x1="0" y1="0" x2="1" y2="0">
-                    <stop offset="0%" stop-color="#93C5FD" />
-                    <stop offset="100%" stop-color="#1E40AF" />
-                </linearGradient>
-            </defs>
-        </svg>
-    </div>
-        </div>
-
-        <!-- Section 3: CTA Banner -->
-        <div class="relative bg-gradient-to-r from-blue-300 to-blue-800 text-white text-center py-12">
-            <!-- <div class="absolute inset-x-0 -top-6 bg-white h-8 rounded-full opacity-20"></div> -->
-            <h2 class="text-4xl font-bold">Shape Your Future Today!</h2>
-            <a href="#" class="mt-4 inline-block bg-white text-blue-600 font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 hover:shadow-xl transition">
-                Apply Now for PGDM 2025
-            </a>
-        </div>
-        <div class="p-6 bg-gray-200" id="animated-footer">
-            <div class="flex justify-between items-center flex-wrap">
-                <!-- Footer Text -->
-                <div class="mb-4 sm:mb-0">
-                    <h3 class="font-bold text-lg text-gray-800">Where Excellence Meets Opportunity</h3>
-                    <p class="text-gray-600 mt-2">In partnership with leading companies.</p>
-                </div>
-                <!-- SVG Logos -->
-                <div class="flex space-x-4">
-                    <img src="images/css.webp" alt="Logo 1" class="h-24 w-24 object-contain">
-            <!-- Logo 2 -->
-            <img src="images/corizo.webp" alt="Logo 2" class="h-24 w-24 object-contain">
-            <!-- Logo 3 -->
-            <img src="images/urs.webp" alt="Logo 3" class="h-24 w-24 object-contain">
+                <!-- Curved Line Decoration -->
+                <div class="absolute right-0 left-0 bottom-0 w-full z-0">
+                    <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                        <path
+                            fill="url(#gradient)"
+                            fill-opacity="1"
+                            d="M0,256L80,224C160,192,320,128,480,128C640,128,800,192,960,224C1120,256,1280,256,1360,256L1440,256L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+                        ></path>
+                        <defs>
+                            <linearGradient id="gradient" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="#bfdbfe" />
+                                <!-- Lighter blue -->
+                                <stop offset="100%" stop-color="#3b82f6" />
+                                <!-- Lighter navy -->
+                            </linearGradient>
+                        </defs>
+                    </svg>
                 </div>
             </div>
+
+            <!-- Section 3: CTA Banner -->
+            <div class="relative bg-gradient-to-r from-blue-200 to-blue-600 text-white text-center py-12">
+                <!-- <div class="absolute inset-x-0 -top-6 bg-white h-8 rounded-full opacity-20"></div> -->
+                <h2 class="text-4xl font-bold">Shape Your Future Today!</h2>
+                <a href="#" class="mt-4 inline-block bg-white text-blue-600 font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 hover:shadow-xl transition">
+                    Apply Now for PGDM 2025
+                </a>
+            </div>
+            <div class="p-6 bg-gray-200" id="animated-footer">
+                <div class="flex justify-between items-center flex-wrap">
+                    <!-- Footer Text -->
+                    <div class="mb-4 sm:mb-0">
+                        <h3 class="font-bold text-lg text-gray-800">Where Excellence Meets Opportunity</h3>
+                        <p class="text-gray-600 mt-2">In partnership with leading companies.</p>
+                    </div>
+                    <!-- SVG Logos -->
+                    <div class="flex space-x-4">
+                        <img src="images/css.webp" alt="Logo 1" class="h-24 w-24 object-contain" />
+                        <!-- Logo 2 -->
+                        <img src="images/corizo.webp" alt="Logo 2" class="h-24 w-24 object-contain" />
+                        <!-- Logo 3 -->
+                        <img src="images/urs.webp" alt="Logo 3" class="h-24 w-24 object-contain" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Section -->
+            <footer id="footer" class="bg-gray-800 text-white py-8">
+                <div class="max-w-6xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center">
+                    <!-- Left Side: Contact Info -->
+                    <div class="mb-6 md:mb-0 text-center md:text-left flex justify-center items-center gap-4">
+                        <p class="font-semibold">
+                            Call Us:
+                            <a href="tel:+1234567890" class="text-blue-400 hover:underline">+1 234 567 890</a>
+                        </p>
+                        <p class="">
+                            Website:
+                            <a href="https://www.example.com" class="text-blue-400 hover:underline" target="_blank">www.example.com</a>
+                        </p>
+                    </div>
+
+                    <!-- Right Side: Social Media Icons -->
+                    <div class="flex space-x-6 text-center z-10">
+                        <a href="https://facebook.com" target="_blank" class="text-gray-400 hover:text-blue-500 text-xl">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="text-gray-400 hover:text-blue-400 text-xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="text-gray-400 hover:text-blue-600 text-xl">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="text-gray-400 hover:text-pink-500 text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </footer>
         </div>
-    
-<!-- Footer Section -->
-<footer id="footer" class="bg-gray-800 text-white py-8">
-    <div class="max-w-6xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center">
-        <!-- Left Side: Contact Info -->
-        <div class="mb-6 md:mb-0 text-center md:text-left flex justify-center items-center gap-4">
-            <p class="font-semibold">Call Us: 
-                <a href="tel:+1234567890" class="text-blue-400 hover:underline">+1 234 567 890</a>
-            </p>
-            <p class="">
-                Website: 
-                <a href="https://www.example.com" class="text-blue-400 hover:underline" target="_blank">www.example.com</a>
-            </p>
-        </div>
 
-        <!-- Right Side: Social Media Icons -->
-        <div class="flex space-x-6 text-center z-10">
-            <a href="https://facebook.com" target="_blank" class="text-gray-400 hover:text-blue-500 text-xl ">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://twitter.com" target="_blank" class="text-gray-400 hover:text-blue-400 text-xl">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://linkedin.com" target="_blank" class="text-gray-400 hover:text-blue-600 text-xl">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank" class="text-gray-400 hover:text-pink-500 text-xl">
-                <i class="fab fa-instagram"></i>
-            </a>
-        </div>
-    </div>
-</footer>
-        
-    </div>
+        <script>
+            // GSAP Animations
+            gsap.from("#logo", { opacity: 0, y: -50, duration: 1 });
+            gsap.from("#intro h2", { opacity: 0, x: -100, duration: 1, delay: 0.5 });
+            gsap.from("#intro p", { opacity: 0, x: 100, duration: 1, delay: 0.7 });
+            gsap.from("#banner", { opacity: 0, scale: 0.9, duration: 1, delay: 1 });
+            gsap.from(".highlight-item", { opacity: 0, y: 50, stagger: 0.2, duration: 1, delay: 1.5 });
+            gsap.from(".cta", { opacity: 0, scale: 0.8, duration: 1, delay: 2 });
+            gsap.from("#cta-banner h2", { opacity: 0, y: -50, duration: 1, delay: 2.5 });
+            gsap.from("#cta-banner a", { opacity: 0, y: 50, duration: 1, delay: 2.7 });
+            gsap.registerPlugin(ScrollTrigger);
 
-    <script>
-        // GSAP Animations
-        gsap.from("#logo", { opacity: 0, y: -50, duration: 1 });
-        gsap.from("#intro h2", { opacity: 0, x: -100, duration: 1, delay: 0.5 });
-        gsap.from("#intro p", { opacity: 0, x: 100, duration: 1, delay: 0.7 });
-        gsap.from("#banner", { opacity: 0, scale: 0.9, duration: 1, delay: 1 });
-        gsap.from(".highlight-item", { opacity: 0, y: 50, stagger: 0.2, duration: 1, delay: 1.5 });
-        gsap.from(".cta", { opacity: 0, scale: 0.8, duration: 1, delay: 2 });
-        gsap.from("#cta-banner h2", { opacity: 0, y: -50, duration: 1, delay: 2.5 });
-        gsap.from("#cta-banner a", { opacity: 0, y: 50, duration: 1, delay: 2.7 });
-        gsap.registerPlugin(ScrollTrigger);
+            // Animate Footer Section
+            gsap.from("#animated-footer h3", {
+                scrollTrigger: "#animated-footer",
+                duration: 1,
+                x: -50,
+                opacity: 0,
+                ease: "power2.out",
+            });
 
-        // Animate Footer Section
-        gsap.from("#animated-footer h3", {
-            scrollTrigger: "#animated-footer",
-            duration: 1,
-            x: -50,
-            opacity: 0,
-            ease: "power2.out",
-        });
+            gsap.from("#animated-footer p", {
+                scrollTrigger: "#animated-footer",
+                duration: 1,
+                x: -50,
+                opacity: 0,
+                delay: 0.3,
+                ease: "power2.out",
+            });
 
-        gsap.from("#animated-footer p", {
-            scrollTrigger: "#animated-footer",
-            duration: 1,
-            x: -50,
-            opacity: 0,
-            delay: 0.3,
-            ease: "power2.out",
-        });
-
-        gsap.from("#animated-footer .logo", {
-            scrollTrigger: "#animated-footer",
-            duration: 1,
-            scale: 0,
-            stagger: 0.2,
-            opacity: 0,
-            ease: "back.out(1.7)",
-        });
-
-        
-    </script>
-</body>
-
+            gsap.from("#animated-footer .logo", {
+                scrollTrigger: "#animated-footer",
+                duration: 1,
+                scale: 0,
+                stagger: 0.2,
+                opacity: 0,
+                ease: "back.out(1.7)",
+            });
+        </script>
+    </body>
 </html>
