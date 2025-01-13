@@ -26,18 +26,14 @@
             </div>
 
             <div id="banner" class="bg-gray-800 relative sm:mb-32 md:mb-20 lg:mb-16">
-                <!-- Banner Image -->
                 <img src="images/emailer-banner.webp" alt="Student Image" class="w-full h-auto" />
               
-                <!-- Overlay Content -->
                 <div
                   class="sm:absolute relative sm:bottom-0 sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:translate-y-1/2 bg-gradient-to-r from-yellow-400 via-orange-300 to-yellow-400 py-6 sm:rounded-tr-full shadow-lg w-full sm:w-full flex flex-col sm:flex-row justify-between items-center gap-6 px-4 sm:px-10"
                 >   
-                  <!-- Background Highlights -->
                   <div class="absolute -top-8 left-8 w-20 h-20 sm:w-32 sm:h-32 bg-yellow-300 rounded-full blur-xl opacity-30"></div>
                   <div class="absolute -bottom-8 right-8 w-20 h-20 sm:w-32 sm:h-32 bg-orange-400 rounded-full blur-xl opacity-30"></div>
               
-                  <!-- Highlights Section -->
                   <div class="grid grid-cols-2 sm:grid-cols-2 gap-4 w-full sm:w-9/12 text-center z-10">
                     <div class="highlight-item flex flex-col items-center justify-center gap-1">
                       <i class="fas fa-chart-line text-xl sm:text-3xl text-gray-800"></i>
@@ -57,7 +53,6 @@
                     </div>
                   </div>
               
-                  <!-- Call-to-Action Section -->
                   <div class="cta w-full sm:w-3/12 z-10 text-center">
                     <a href="https://www.accurate.in/program/management/pgdm/">
                       <button
@@ -143,29 +138,60 @@
                         <h3 class="font-bold text-lg text-gray-800">Where Excellence Meets Opportunity</h3>
                         <p class="text-gray-600 mt-2">In partnership with leading companies.</p>
                     </div>
-                    <div class="flex max-sm:flex-col maxsm:justify-center max-sm:space-x-0 space-x-4">
-                        <img src="images/css.webp" alt="Logo 1" class="h-24 w-24 object-contain" />
-                        <img src="images/corizo.webp" alt="Logo 2" class="h-24 w-24 object-contain" />
-                        <img src="images/urs.webp" alt="Logo 3" class="h-24 w-24 object-contain" />
+                    <div class="flex max-sm:flex-col max-sm:justify-center max-sm:space-x-0 space-x-4" id="logo-container">
+                        <img src="images/airtellogo.webp" alt="Logo 1" class="h-24 w-24 object-contain logo" />
+                        <img src="images/amullogo.webp" alt="Logo 2" class="h-24 w-24 object-contain logo" />
+                        <img src="images/axislogo.webp" alt="Logo 3" class="h-24 w-24 object-contain logo" />
                     </div>
                 </div>
             </div>
+            
+            <script>
+                const logoSets = [
+                    [
+                        { src: "images/airtellogo.webp", alt: "Logo 1" },
+                        { src: "images/amullogo.webp", alt: "Logo 2" },
+                        { src: "images/axislogo.webp", alt: "Logo 3" },
+                    ],
+                    [
+                        { src: "images/bergelogo.webp", alt: "Logo 4" },
+                        { src: "images/bigbasketlogo.webp", alt: "Logo 5" },
+                        { src: "images/decathlonlogo.webp", alt: "Logo 6" },
+                    ],
+                ];
+            
+                let currentSetIndex = 0;
+                const logoContainer = document.getElementById("logo-container");
+            
+                function updateLogos() {
+                    currentSetIndex = (currentSetIndex + 1) % logoSets.length;
+            
+                    logoContainer.innerHTML = "";
+            
+                    logoSets[currentSetIndex].forEach(logo => {
+                        const imgElement = document.createElement("img");
+                        imgElement.src = logo.src;
+                        imgElement.alt = logo.alt;
+                        imgElement.className = "h-24 w-24 object-contain logo";
+                        logoContainer.appendChild(imgElement);
+                    });
+                }
+            
+                setInterval(updateLogos, 3000);
+            </script>
 
             <footer id="footer" class="bg-gray-800 text-white py-8">
                 <div class="max-w-6xl mx-auto px-8 flex flex-col space-y-6 md:flex-row md:space-y-0 justify-between items-center">
-                    <!-- Contact Info -->
                     <div class="w-full md:w-auto flex flex-col sm:flex-row justify-center md:justify-start items-center gap-6 text-center md:text-left">
-                        <!-- Phone -->
                         <div class="flex items-center space-x-2 hover:scale-105 transform transition-all duration-200">
-                            <i class="fas fa-phone-alt"></i> <!-- Phone icon -->
+                            <i class="fas fa-phone-alt"></i>
                             <p class="font-semibold text-lg">
                                 Call Us:
                                 <a href="tel:+91 9899569090" class="text-blue-400">+91 9899569090</a>
                             </p>
                         </div>
-                        <!-- Website -->
                         <div class="flex items-center space-x-2 hover:scale-105 transform transition-all duration-200">
-                            <i class="fas fa-globe"></i> <!-- Globe icon for website -->
+                            <i class="fas fa-globe"></i>
                             <p class="text-lg">
                                 Website:
                                 <a href="https://www.accurate.in" class="text-blue-400 text-lg" target="_blank">www.accurate.in</a>
@@ -173,7 +199,6 @@
                         </div>
                     </div>
             
-                    <!-- Social Media Links -->
                     <div class="flex justify-center space-x-6 text-center">
                         <a href="https://facebook.com" target="_blank" class="text-gray-400 hover:text-blue-500 text-xl hover:scale-125 transform transition-all duration-200">
                             <i class="fab fa-facebook-f"></i>
